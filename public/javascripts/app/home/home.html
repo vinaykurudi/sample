@@ -1,0 +1,15 @@
+<h1>Home Page</h1>
+<p>Welcome to my application</p>
+
+<div>
+	<label>Date/Time:</label> <span>{{news.date | date:'medium'}}</span><br/>
+	<label>News:</label> <span>{{news.message}}</span>
+</div>
+
+<div>
+	<input type="text" class="pull-left"
+		ng-model="selectedRecord"
+		typeahead="data as data.name for data in getTestData() | filter:$viewValue" typeahead-wait-ms=200
+		typeahead-loading="loading"  placeholder="Search for a Data" />
+
+</div>
